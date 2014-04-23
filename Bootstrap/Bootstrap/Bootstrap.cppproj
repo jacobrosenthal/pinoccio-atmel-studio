@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{ed6da2c9-8b9d-4e8c-a47e-fdc8884f3c44}</ProjectGuid>
+    <avrdevice>ATmega256RFR2</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Bootstrap</AssemblyName>
+    <Name>Bootstrap</Name>
+    <RootNamespace>Bootstrap</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.15.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagEnableExtResetOnStartSession>true</JtagEnableExtResetOnStartSession>
+          <JtagDbgClock>220000</JtagDbgClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+          <JtagSelectedDeviceIndexInChain>
+          </JtagSelectedDeviceIndexInChain>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML1784030200007439</ToolNumber>
+      <ToolName>XPRO-EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=156</Value>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../../Arduino/hardware/pinoccio/avr/variants/pinoccio</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src/GSModule</Value>
+            <Value>../../../../../Arduino/libraries/js0n</Value>
+            <Value>../../../../../Arduino/libraries/lwm</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/hal</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/nwk</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/phy</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/sys</Value>
+            <Value>../../../../../Arduino/libraries/bitlash/src</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/examples/Bootstrap</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src/peripherals</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=156</Value>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../../Arduino/hardware/pinoccio/avr/variants/pinoccio</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src/GSModule</Value>
+            <Value>../../../../../Arduino/libraries/js0n</Value>
+            <Value>../../../../../Arduino/libraries/lwm</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/hal</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/nwk</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/phy</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/sys</Value>
+            <Value>../../../../../Arduino/libraries/bitlash</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/examples/Bootstrap</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src/peripherals</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-fno-exceptions</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+            <Value>core</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../../../../pinoccio16mhz</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=156</Value>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../../Arduino/hardware/pinoccio/avr/variants/pinoccio</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src/GSModule</Value>
+            <Value>../../../../../Arduino/libraries/js0n</Value>
+            <Value>../../../../../Arduino/libraries/lwm</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/hal</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/nwk</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/phy</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/sys</Value>
+            <Value>../../../../../Arduino/libraries/bitlash/src</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/examples/Bootstrap</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src/peripherals</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=156</Value>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../../Arduino/hardware/pinoccio/avr/variants/pinoccio</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src</Value>
+            <Value>../../../../../Arduino/libraries/gainspan/src/GSModule</Value>
+            <Value>../../../../../Arduino/libraries/js0n</Value>
+            <Value>../../../../../Arduino/libraries/lwm</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/hal</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/nwk</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/phy</Value>
+            <Value>../../../../../Arduino/libraries/lwm/src/lwm/sys</Value>
+            <Value>../../../../../Arduino/libraries/bitlash</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+            <Value>../../../../../../../../Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/examples/Bootstrap</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src</Value>
+            <Value>../../../../../Arduino/libraries/pinoccio/src/peripherals</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-fno-exceptions</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+            <Value>core</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../../../../pinoccio16mhz</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HardwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial0.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HardwareSerial0.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial1.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HardwareSerial1.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial2.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HardwareSerial2.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial3.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HardwareSerial3.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\HID.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HID.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\hooks.c">
+      <SubType>compile</SubType>
+      <Link>libs\hooks.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\main.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\new.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Print.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>libs\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>libs\wiring.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>libs\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>libs\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+      <Link>libs\wiring_pulse.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>libs\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\WString.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\SPI.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\SPI.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\utility\twi.c">
+      <SubType>compile</SubType>
+      <Link>libs\twi.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Wire.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\bitlash\bitlash.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\bitlash.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSClient.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSClient.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSCore.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSCore.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSModule.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSModule.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSTcpClient.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSTcpClient.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSUdpClient.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSUdpClient.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\gainspan\src\GSModule\GSUdpServer.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\GSUdpServer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\js0n\j0g.c">
+      <SubType>compile</SubType>
+      <Link>libs\j0g.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\js0n\js0n.c">
+      <SubType>compile</SubType>
+      <Link>libs\js0n.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwk.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwk.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkDataReq.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkDataReq.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkFrame.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkFrame.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkGroup.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkGroup.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkRoute.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkRoute.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkRouteDiscovery.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkRouteDiscovery.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkRx.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkRx.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkSecurity.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkSecurity.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\nwk\nwkTx.c">
+      <SubType>compile</SubType>
+      <Link>libs\nwkTx.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\phy\phy.c">
+      <SubType>compile</SubType>
+      <Link>libs\phy.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\sys\sys.c">
+      <SubType>compile</SubType>
+      <Link>libs\sys.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\sys\sysEncrypt.c">
+      <SubType>compile</SubType>
+      <Link>libs\sysEncrypt.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\lwm\src\lwm\sys\sysTimer.c">
+      <SubType>compile</SubType>
+      <Link>libs\sysTimer.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\backpack-bus\Pbbe.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Pbbe.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\backpack-bus\PBBP.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\PBBP.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\backpacks\Backpack.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Backpack.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\backpacks\Backpacks.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Backpacks.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\backpacks\wifi\WiFiBackpack.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\WiFiBackpack.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\hq\HqInfo.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\HqInfo.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\key\key.c">
+      <SubType>compile</SubType>
+      <Link>libs\key.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\peripherals\Flash.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Flash.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\peripherals\halFuelGauge.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\halFuelGauge.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\peripherals\halRgbLed.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\halRgbLed.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\peripherals\halTemperature.c">
+      <SubType>compile</SubType>
+      <Link>libs\halTemperature.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\Pinoccio.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Pinoccio.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\Scout.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Scout.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\ScoutHandler.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\ScoutHandler.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\Shell.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\Shell.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\util\memdebug.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\memdebug.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Arduino\libraries\pinoccio\src\util\StringBuffer.cpp">
+      <SubType>compile</SubType>
+      <Link>libs\StringBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="Bootstrap.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libs" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
